@@ -13,6 +13,7 @@
 	<link rel="icon" href="img/favicon.png">
 	<!-- styles -->
 	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
 	<!-- styles end-->
 
 </head>
@@ -31,7 +32,7 @@
 					<ul class="contacts-content">
 						<li class="contact">
 							<a href="#" class="contact__item">+38 (099) 786-84-96</a>
-							<a href="#" class="contact__btn">Заказать звонок</a>
+							<a href="#popup" class="contact__btn">Заказать звонок</a>
 						</li>
 						<div class="contact__line d-none d-lg-block"></div>
 						<li class="contact">
@@ -49,7 +50,8 @@
 			<div class="row justify-content-between">
 				<div class="col-12 col-lg-6 banner-content">
 					<div class="mobile-banner-img d-flex d-lg-none">
-						<img src="img/banner/Ellipse.png" alt="">
+						<img src="img/banner/Ellipse.png" class="banner-ellipse" alt="">
+						<img src="img/banner/foot.png" class="banner-foot d-block d-lg-none banner-foot banner-foot_m" alt="">
 						
 					</div>
 					<h1 class="banner-content__title">
@@ -57,32 +59,29 @@
 						<br>
 						без долгих болезненных процедур? 
 					</h1>
-					<form class="banner-form" action="handler.php">
 					<div class="row justify-content-center">
-						<div class="col-12 col-lg-6">
-							<div class="banner-form__input">
-								<label class="banner-form__title" for="check1">Введите Ваш телефон</label>
-								<input type="text" id="number">
-							</div>
-						</div>
-						<div class="col-12 col-lg-6">
-							<div class="banner-form__submit">
-	                        	<input type="submit" value="Записаться на эпиляцию" class="banner-button">
-							</div>
-						</div>
+						<form class="banner-form" action="handler.php">
+								<div class="col-12 col-lg-6">
+									<div class="banner-form__input">
+										<label class="banner-form__title" for="check1">Введите Ваш телефон</label>
+										<input type="text" id="phone">
+									</div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<div class="banner-form__submit">
+			                        	<input type="submit" value="Записаться на эпиляцию" class="banner-button">
+									</div>
+								</div>
+						</form> 
 					</div>
-						
-
-					</form> 
 				</div>
 
 				<div class="col-12 col-lg-5 banner-img d-none d-lg-block">
-					<img src="img/banner/Ellipse.png" alt="">
+					<img src="img/banner/Ellipse.png" class="banner-ellipse" alt="">
+					<img src="img/banner/foot.png" class="banner-foot d-none d-lg-block" alt="">
 				</div>
 			</div>
 		</div>
-	<img src="img/banner/foot.png" class="banner-foot d-none d-lg-block" alt="">
-	<img src="img/banner/foot.png" class="banner-foot d-block d-lg-none banner-foot banner-foot_m" alt="">
 	</section>
 
 
@@ -270,7 +269,7 @@
 							<div class="col-12 col-lg-6">
 								<div class="banner-form__input">
 									<label class="banner-form__title" for="check1">Введите Ваш телефон</label>
-									<input type="text" id="number">
+									<input type="text" id="phone">
 								</div>
 							</div>
 							<div class="col-12 col-lg-6">
@@ -482,14 +481,14 @@
 						<div class="col-12 col-lg-4 banner-content banner-content_off">	
 							<div class="banner-form__input banner-form__input_f">
 								<label class="banner-form__title" for="check1">Введите Ваше Имя</label>
-								<input type="text" id="number">
+								<input type="text" id="name">
 							</div>
 						</div>
 
 						<div class="col-12 col-lg-4 banner-content banner-content_off">	
 							<div class="banner-form__input banner-form__input_f">
 								<label class="banner-form__title" for="check1">Введите Ваш телефон</label>
-								<input type="text" id="number">
+								<input type="text" id="phone">
 							</div>
 						</div>
 						
@@ -644,13 +643,48 @@
 		</div>
 	</section>
 
+<!-- form itself -->
+	<div class="mfp-hide container-contact100" id="popup">
+		<div class="wrap-contact100">
+			<form id="callback" class="contact100-form validate-form" action="form.php">
+				<span class="contact100-form-title">
+					<h2>Обратный звонок</h2>
+					<p>Оставьте свои данные и мы перезвоним вам в течении 10 мин</p>
+				</span>
 
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<input class="input100" id="name" type="text" name="name" placeholder="Ваше Имя">
+				</div>
 
+				<div class="wrap-input100 validate-input" data-validate = "Phone is required">
+					<input class="input100" id="phone" type="text" name="phone" placeholder="Ваше Номер Телефона">
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+			            <input type="submit" value="Перезвоните мне!" class="contact100-form-btn">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="success-popup" class="mfp-hide">
+		<div class="banner-info banner-info_success">
+			Отправка успешно завершена!
+		</div>
+	</div>
+	<div id="fail-popup" class="mfp-hide">
+		<div class="banner-info banner-info_fail">
+			Отправка не получилась!
+		</div>
+	</div>
 	<!-- scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 	
-	<script src="js/scripts.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/script.js"></script>
 	<!-- scripts end -->
 </body>
 </html>
