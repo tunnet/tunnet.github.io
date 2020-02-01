@@ -54,7 +54,7 @@ $(document).ready(function() {
 			focus: '#name',
 			mainClass: 'my-mfp-slide-bottom'
 		});
-	}, 10000);
+	}, 15000);
 
 	// Объявление попап-функций. Плагин Magnific Popup
 	var openSucsessPopup = function() {
