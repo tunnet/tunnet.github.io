@@ -1,10 +1,6 @@
 $(document).ready(function() {
 
 
-	jQuery(function($){
-	   $("#phone").mask("389999999999");
-	});
-
 	$(".contact_scroll").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
@@ -13,7 +9,7 @@ $(document).ready(function() {
     });
 
 
-	$(".banner-form").on('submit', function() {
+	$(".lead-form").on('submit', function() {
 		event.preventDefault();
 		$.ajax({
 			url: 'mail.php',
