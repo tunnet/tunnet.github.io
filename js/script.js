@@ -5,7 +5,7 @@ $(document).ready(function() {
 	   $("#phone").mask("389999999999");
 	});
 
-	$("#bd-menu").on("click","a", function (event) {
+	$(".contact_scroll").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
@@ -38,7 +38,7 @@ $(document).ready(function() {
 		})
 	});
 
-	$('.contact__btn').magnificPopup({
+	$('#contact-btn').magnificPopup({
 		type: 'inline',
 		preloader: false,
 	});
