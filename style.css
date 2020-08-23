@@ -1,0 +1,60 @@
+body{
+	padding: 40px;
+}
+.first-step{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+#phrasesCreate{
+	display: none;
+	margin-top: 130px;
+}
+#listCreate{
+	display: none;
+	margin-top: 30px;
+}
+
+.bd-card{
+	position: relative;
+    background-color: rgba(0,0,0,.055);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.list-group-item{
+	margin: 5px;
+}
+.list-group-item:first-child{
+	margin-top: 30px;
+}
+.list-group-item:last-child{
+	margin-bottom: 30px;
+}
+form > div:last-child{
+	margin-top: 40px;
+}
+.list-group-item+.list-group-item{
+border-top-width: 1px;
+}
+
+.list-group-item-success{
+	pointer-events: none;
+}
+
+
+.title-list{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-list button{
+	margin: 0 5px;
+}
